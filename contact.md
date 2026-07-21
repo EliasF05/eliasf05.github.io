@@ -1,5 +1,5 @@
 ---
-layout: default 
+layout: default  
 title: Contact
 description: **[elias@fruehwein.net](elias@fruehwein.net)** 
 ---  
