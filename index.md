@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Elias Fruehwein - Portfolio
+title: Elias Frühwein - Portfolio
 --- 
 
 **[Home](index.md)** | **[CV](cv.md)**
