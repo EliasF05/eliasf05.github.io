@@ -1,12 +1,9 @@
 ---
 layout: default
-title: Resume
+title: Resume 
+--- 
+
+**[Home](index.md)** | **[Projects](projects.md)** | **[CV](cv.md)** 
+
 ---
 
-**[Home](index.md)** | **[CV](cv.md)**
-
----
-
-# Resume
-
-*(CV content coming soon)*
