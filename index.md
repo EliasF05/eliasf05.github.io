@@ -1,5 +1,5 @@
 ---
 layout: default
-title: Elias Frühwein - Personal Website
+title: Elias Frühwein 
 ---
 
