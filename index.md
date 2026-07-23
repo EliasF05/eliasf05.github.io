@@ -3,7 +3,7 @@ layout: default
 title: Elias Frühwein 
 --- 
 
-**[Home](index.md)** | **[Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
+**[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
 
 **About Me** \
