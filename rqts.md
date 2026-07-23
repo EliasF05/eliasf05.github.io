@@ -21,6 +21,8 @@ Analogously to the need of an inductive bias in machine learning, reconstruction
 Marginalizing over all possible autoregressive models will surely be intractable, so we need to use a point estimate of $$p$$, $$\{\phi_i\}$$, and $$\sigma^2$$. We can then use this point estimate to estimate $$x_{1:T}$$ from $$y_{1:T}$$ using state estimation methods. For now, it will be useful to assume that we have an estimate of $$p$$, $$\{\phi_i\}$$, and $$\sigma^2$$, and focus on the state estimation step. We will see how we can turn the ability to do state estimation into a parameter estimation algorithm afterwards. <br><br> 
 
 **State Estimation**<br>
-State estimation can be done 
+State estimation is the task of inferring the hidden, unobserved state $$x_t$$ of a system (e.g. the original values), using observations $$y_{1:T}$$ (e.g. the quantized values). For certain applications, it might be the case that we need to perform state estimation in real-time, meaning that $$T=t$$, as observations from future timepoints are not yet available. Real-time state estimation is often called *filtering*. The general case, when $$T\geq t$$ is called *smoothing*.<br><br>
+
+It turns out that 
 
 
