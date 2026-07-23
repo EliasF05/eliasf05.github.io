@@ -9,7 +9,7 @@ description: Bachelor's Thesis
 **[Home](index.md)** | **[Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
 
-This article is 100% human-written.<br>
+This article is 100% human-written.<br><br>
 **Problem Statement** <br>
 Time series are sometimes quantized, for example in order to save memory. For coarse quantization, this means that we lose quite a lot of information - or does it?
 <p align="center">
