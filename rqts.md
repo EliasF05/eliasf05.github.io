@@ -12,7 +12,7 @@ description: Bachelor's Thesis
 **Problem Statement** <br>
 Time series are sometimes quantized, for example in order to save memory. For coarse quantization, this means that we lose quite a lot of information - or does it?
 <p align="center">
-  <img src="quantizedARExampleBlog.jpg" alt="Reconstruction Plot" width="60%">
+  <img src="quantizedARExampleBlog.jpg" alt="Reconstruction Plot" width="30%">
 </p>
 Attempting to reconstruct the blue curve using only the orange curve seems like an ill-defined problem, and in general, it is. But practically, we might be able to do quite well. <br><br>
 **Reconstruction Bias** <br>
