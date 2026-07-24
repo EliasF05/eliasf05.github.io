@@ -25,8 +25,7 @@ Marginalizing over all possible autoregressive models will surely be intractable
 **State Estimation**<br>
 State estimation is the task of inferring the hidden, unobserved state $$x_t$$ of a system (e.g. the original values), using observations $$y_{1:T}$$ (e.g. the quantized values). For certain applications, it might be the case that we need to perform state estimation in real-time, meaning that $$T=t$$, as observations from future timepoints are not yet available. Real-time state estimation is often called *filtering*. The general case, where $$T\geq t$$, is called *smoothing*.<br><br>
 
-Let us begin with the filtering problem, and then move on to smoothing.
-
+Let us begin with the filtering problem, and then move on to smoothing.<br><br><br>
 *--- Particle Filtering ---*<br><br>
 Particle filtering is a Monte Carlo method - that is, we use samples (which are often called particles) of $$p(x_{t}|y_{1:t})$$ to approximate $$\mathbb{E}[x_t|y_{1:t}]$$, our quantity of interest. To draw these samples, we begin by specifying some beginning target density that approximates $$p(x_1|y_{1})$$, and then inductively assume that we have i.i.d. samples of $$p(x_{t}|y_{1:t})$$. <br><br>To simulate $$p(x_{t+1}|y_{1:t+1})$$, we begin by drawing samples from $$p(x_{t+1}|x_t, y_{t+1})$$. This density is called the *optimal proposal density*, and it is not always easy (or necessary) to sample this density. It is not hard to see, that for our (AR(p), deterministic quantization) model, this distribution is a truncated gaussian, for which efficient sampling methods exist.<br><br>
 
@@ -34,7 +33,9 @@ After we we have drawn $$X_{t+1}^{i} \sim p(x_{t+1}|x_t, y_{t+1})$$, the $$X_{t:
 This works perfectly fine, but nevertheless, there is something slightly disturbing about what we have done. If the variance of the importance weights is large, resampling will lead to a degenerate set of samples, meaning that our estimate of $$\mathbb{E}[x_{t+1}|y_{1:t+1}]$$, namely $$\frac{1}{N}\sum_{i=1}^N X_{t+1}^i$$, will suffer from high variance. To compensate, we will need a large number of samples, leading to higher computational cost. The disturbing part here is that the density we're resampling according to, $$p(y_{t+1}|x_t)$$, does not actually depend on $$x_{t+1}$$. In other words, our importance weight for $$X_{t+1}^i$$ doesn't actually depend on $$X_{t+1}^i$$, so we could have easily mitigated our problem associated with sample degeneracy, by simply switching the order of the sampling and resampling steps. That is, we resample the $$X_t^i$$'s we have by induction according to $$p(y_{t+1}|x_t)$$, and only then sample $$X_{t+1}^i$$. This has a name, and is called *auxiliary particle filtering*.<br><br>
 Note: When our dynamics are linear with gaussian noise (and in some other cases), we can use the *Kalman filter* to track state expectations and covariances analytically. In our case, the severe non-linearity introduced by quantization prevents the successful application of Kalman filtering and its variants. 
 
-**Particle Smoothing**<br>
+*--- Particle Smoothing ---**<br><br>
+
+
 
 **Parameter Estimation**<br>
 
