@@ -23,26 +23,15 @@ Click once to overlay the original time series, then click again to overlay the 
     <!-- State 2: Quantized + Original + Estimate (Hidden by default) -->
     <img id="graphic-state-2" src="after.jpg" alt="Quantized with original and estimated overlay" style="width: 100%; position: absolute; top: 0; left: 0; display: none;">
   </div>
-  
-  <p id="graphic-caption" style="font-style: italic; color: #555; margin-top: 8px;">
-    Showing: Quantized Time Series (Click image to overlay original data)
-  </p>
 </div>
 
 <script>
   (function() {
     var container = document.getElementById('thesis-graphic-container');
-    var caption = document.getElementById('graphic-caption');
     var states = [
       document.getElementById('graphic-state-0'),
       document.getElementById('graphic-state-1'),
       document.getElementById('graphic-state-2')
-    ];
-    
-    var captions = [
-      "Showing: Quantized Time Series (Click image to overlay original data)",
-      "Showing: Original Time Series Overlay (Click again to overlay the estimate)",
-      "Showing: Final Estimate Overlay (Click to reset)"
     ];
     
     var currentState = 0;
