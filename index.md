@@ -7,7 +7,7 @@ title: Elias Frühwein
 ---
 
 **About Me** \
-Graduate student in data science interested in most topics in machine learning, with some research experience in state estimation and system identification. I enjoy studying, research, and <a href="https://www.chess.com/puzzles/rush" target="_blank" rel="noopener noreferrer">puzzle rush</a>.
+I'm a graduate student in data science with an interest for most topics in machine learning, with some research experience in state estimation and system identification. 
 
 
 
