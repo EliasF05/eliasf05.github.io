@@ -2,7 +2,7 @@
 layout: default 
 title: CV
 description: A rough outline of my education and experience. Please contact me for a more detailed CV.
----  
+--- 
  
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
@@ -15,40 +15,39 @@ description: A rough outline of my education and experience. Please contact me f
 2024 -- 2026: DS&AI Intern at Aucos AG working on time series anomaly detection \
 2025 -- 2026: Teaching Assistant at Maastricht University for the courses Discrete Mathematics and Logic
 
+---
+
 **Places I've Lived**
 
-<table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif; margin-top: 20px;">
-  <!-- Line and Nodes -->
-  <tr>
-    <td style="width: 25%; padding: 0; position: relative;">
-      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
-      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
-    </td>
-    <td style="width: 25%; padding: 0; position: relative;">
-      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
-      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
-    </td>
-    <td style="width: 25%; padding: 0; position: relative;">
-      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
-      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
-    </td>
-    <td style="width: 25%; padding: 0; position: relative;">
-      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
-      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
-    </td>
-  </tr>
-  <!-- Dates -->
-  <tr>
-    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2005 -- 2018</td>
-    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2018 -- 2023</td>
-    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2023 -- 2026</td>
-    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2026 -- Present</td>
-  </tr>
-  <!-- Details -->
-  <tr>
-    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">Aachen, Germany</td>
-    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">New York, United States</td>
-    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">Maastricht, The Netherlands</td>
-    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">Zurich, Switzerland</td>
-  </tr>
-</table>
+<!-- Main horizontal container with the connecting line -->
+<div style="display: flex; justify-content: space-between; position: relative; padding-top: 20px; margin-top: 20px; border-top: 2px solid #ccc; font-family: sans-serif;">
+
+  <!-- Node 1 -->
+  <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
+    <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
+    <strong>2005 -- 2018</strong><br>
+    <span style="font-size: 0.9em; color: #555;">Aachen, Germany</span>
+  </div>
+
+  <!-- Node 2 -->
+  <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
+    <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
+    <strong>2018 -- 2023</strong><br>
+    <span style="font-size: 0.9em; color: #555;">New York, United States</span>
+  </div>
+
+  <!-- Node 3 -->
+  <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
+    <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
+    <strong>2023 -- 2026</strong><br>
+    <span style="font-size: 0.9em; color: #555;">Maastricht, The Netherlands</span>
+  </div>
+
+  <!-- Node 4 (Current) -->
+  <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
+    <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #333; width: 8px; height: 8px; border-radius: 50%;"></div>
+    <strong>2026 -- Present</strong><br>
+    <span style="font-size: 0.9em; color: #555;">Zurich, Switzerland</span>
+  </div>
+
+</div>
