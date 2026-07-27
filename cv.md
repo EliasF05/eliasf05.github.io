@@ -17,31 +17,38 @@ description: A rough outline of my education and experience. Please contact me f
 
 **Places I've Lived**
 
-<div style="border-left: 2px solid #ccc; padding-left: 20px; margin-left: 10px;">
-
-  <div style="margin-bottom: 20px; position: relative;">
-    <div style="position: absolute; left: -26px; top: 4px; background: #fff; border: 2px solid #333; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2026 -- Present</strong><br>
-    Zurich, Switzerland 
-  </div>
-
-  <div style="margin-bottom: 20px; position: relative;">
-    <div style="position: absolute; left: -26px; top: 4px; background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2023 -- 2026</strong><br>
-    Maastricht, The Netherlands
-  </div>
-
-  <div style="margin-bottom: 10px; position: relative;">
-    <div style="position: absolute; left: -26px; top: 4px; background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2018 -- 2023</strong><br>
-    New York, United States
-  </div>
-
-  <div style="margin-bottom: 10px; position: relative;">
-    <div style="position: absolute; left: -26px; top: 4px; background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2005 -- 2018</strong><br>
-    Aachen, Germany
-  </div>
-
-</div>
-
+<table style="width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif; margin-top: 20px;">
+  <!-- Line and Nodes -->
+  <tr>
+    <td style="width: 25%; padding: 0; position: relative;">
+      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
+      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
+    </td>
+    <td style="width: 25%; padding: 0; position: relative;">
+      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
+      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
+    </td>
+    <td style="width: 25%; padding: 0; position: relative;">
+      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
+      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
+    </td>
+    <td style="width: 25%; padding: 0; position: relative;">
+      <div style="height: 4px; background-color: #ccc; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;"></div>
+      <div style="width: 12px; height: 12px; background-color: #333; border-radius: 50%; margin: 0 auto; position: relative; z-index: 2;"></div>
+    </td>
+  </tr>
+  <!-- Dates -->
+  <tr>
+    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2005 -- 2018</td>
+    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2018 -- 2023</td>
+    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2023 -- 2026</td>
+    <td style="padding-top: 10px; font-weight: bold; font-size: 0.9em;">2026 -- Present</td>
+  </tr>
+  <!-- Details -->
+  <tr>
+    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">Aachen, Germany</td>
+    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">New York, United States</td>
+    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">Maastricht, The Netherlands</td>
+    <td style="vertical-align: top; font-size: 0.85em; color: #555; padding: 5px 10px;">Zurich, Switzerland</td>
+  </tr>
+</table>
