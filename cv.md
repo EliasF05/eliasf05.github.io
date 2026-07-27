@@ -25,28 +25,28 @@ description: A rough outline of my education and experience. Please contact me f
   <!-- Node 1 -->
   <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
     <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2005 -- 2018</strong><br>
+    <strong>2005 - 2018</strong><br>
     <span style="font-size: 0.9em; color: #555;">Aachen, Germany</span>
   </div>
 
   <!-- Node 2 -->
   <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
     <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2018 -- 2023</strong><br>
+    <strong>2018 - 2023</strong><br>
     <span style="font-size: 0.9em; color: #555;">New York, United States</span>
   </div>
 
   <!-- Node 3 -->
   <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
     <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2023 -- 2026</strong><br>
+    <strong>2023 - 2026</strong><br>
     <span style="font-size: 0.9em; color: #555;">Maastricht, The Netherlands</span>
   </div>
 
   <!-- Node 4 (Current) -->
   <div style="flex: 1; position: relative; text-align: center; padding: 0 10px;">
     <div style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #333; width: 8px; height: 8px; border-radius: 50%;"></div>
-    <strong>2026 -- Present</strong><br>
+    <strong>2026 - Present</strong><br>
     <span style="font-size: 0.9em; color: #555;">Zurich, Switzerland</span>
   </div>
 
