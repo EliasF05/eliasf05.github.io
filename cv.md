@@ -34,7 +34,7 @@ description: A rough outline of my education and experience. Please contact me f
   <div style="margin-bottom: 10px; position: relative;">
     <div style="position: absolute; left: -26px; top: 4px; background: #fff; border: 2px solid #ccc; width: 8px; height: 8px; border-radius: 50%;"></div>
     <strong>2018 -- 2023</strong><br>
-    New York, New York
+    New York, United States
   </div>
 
   <div style="margin-bottom: 10px; position: relative;">
