@@ -27,8 +27,9 @@ Again, we will have to resort to a sampling-based approximation. For example, le
 2. Once we've answered 1., how should we estimate $$EU(Q)$$?<br>
 
 ## Answering Question 1 <br>
+The discussion of the first question is 
 
 ## Answering Question 2 <br>
 
-[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected by the learner's inability to assign $$0$$ probability mass to $$\theta$$'s which have a different entropy than the true $$\theta$$. Most often, the true $$\theta$$ will have a comparably low entropy and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in [2]. However, the use of this definition remains standard practice.
+[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from finite samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in [2]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
