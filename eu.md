@@ -27,7 +27,7 @@ Again, we will have to resort to a sampling-based approximation. For example, le
 2. Once we've answered 1., how should we estimate $$EU(Q)$$?<br>
 
 ## Answering Question 1 <br>
-To begin, let us examine the impact of our choice for $$\bar{\theta}$$. 
+To begin, let us examine the impact of our choice for $$\bar{\theta}$$. As a toy example, we can have $$Q$$ be $$U[\frac{1}{2}, \frac{3}{4}]$$. In this case, the below figure shows the discrepancy between the two induced estimation targets.
 <div align="center">
   <div id="thesis-graphic-container" style="position: relative; cursor: pointer; display: inline-block;">
     <img id="graphic-state-0" src="DefinitionsDiscrepancy.jpg" alt="Definitions discrepancy" style="width: 50%; display: block;">
