@@ -21,5 +21,8 @@ The epistemic uncertainty now is defined as the expected additional loss incurre
 $$\begin{equation} EU(Q) = \mathbb{E}_{Q}\left[\mathbb{E}_\hat{\theta}[\mathcal{l}(\bar{\theta}, y)] \right]- AU(Q) \end{equation}$$
 In the case of our running example, where $$\mathcal{l}$$ is the negative log-likelihood, $$EU(Q)$$ is the expected Kullback-Leibler divergence of $$\hat{\theta}$$ from $$\bar{\theta}$$,
 $$\begin{equation} \mathbb{E}_{Q}\left[D_{KL}(\hat{\theta}||\bar{\theta}) \right]\end{equation}.$$
+Again, we will in practice resort to a sample-based approximation. However, assuming we want to use all of our samples for prediction, we cannot easily obtain an unbiased estimator of $$EU(Q)$$, due to the presence of $$\bar{\theta}$$ inside the expectation. In particular, two questions arise:
+1. Is $$\bar{\theta}$$, as used in our definition of epistemic uncertainty, $$\int_{Q} \theta d\theta$$ or $$\frac{1}{M}\sum_{i=1}^M \theta^{(i)}$$?
+2. Once we've answered 1., how should we estimate $$EU(Q)$$?
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected by the learner's inability to assign $$0$$ probability mass to $$\theta$$'s which have a different entropy than the true $$\theta$$. Most often, the true $$\theta$$ will have a comparably low entropy and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in [2]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
