@@ -17,7 +17,7 @@ $$\begin{equation}
 \widehat{AU(Q)} = \frac{1}{N}\sum_{i=1}^N S(\theta^{(i)}),
 \end{equation}$$
 where $$S(\cdot)$$ denotes, as our running example, the Shannon entropy. <br><br> 
-The epistemic uncertainty now is defined as the expected loss incurred by the use of the averaging estimator $$\bar{\theta}$$[^2]:
+The epistemic uncertainty now is defined as the expected additional loss incurred by the use of the averaging estimator $$\bar{\theta}$$[^2]:
 $$\begin{equation} EU(Q) = \mathbb{E}_{Q}\left[\mathbb{E}_\hat{\theta}[\mathcal{l}(\bar{\theta}, y)] \right]- AU(Q) \end{equation}$$
 In the case of our running example, where $$\mathcal{l}$$ is the negative log-likelihood, $$EU(Q)$$ is the expected Kullback-Leibler divergence of $$\hat{\theta}$$ from $$\bar{\theta}$$,
 $$\begin{equation} \mathbb{E}_{Q}\left[D_{KL}(\hat{\theta}||\bar{\theta}) \right]\end{equation}.$$
