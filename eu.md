@@ -4,7 +4,7 @@ title: Towards better Estimators of Epistemic Uncertainty
 description: Personal Project
 --- 
 
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js">
 
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
