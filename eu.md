@@ -8,6 +8,6 @@ description: Personal Project
 
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
-In machine learning, uncertainty arises in two different ways: Imperfect knowledge about the data-generating process ("Epistemic Uncertainty"), and irreducible noise in the data-generating process ("Aleatoric Uncertainty"). <br><br> In the classification setting, if we use a function $$\mathcal{l}(\theta, y)$$ to score the loss associated with the predicted probabilities for each class, $$\theta$$, given the one-hot encoding of the true class, $$y$$, then the aleatoric uncertainty can be defined as the expected loss under our learned generative model $$Q$$ \[1\]: $$\begin{align}
-AU(Q) = \mathbb{E}_{\theta \sim Q}[\matcal{l}(\theta, y)]
-\end{align}$$
+In machine learning, uncertainty arises in two different ways: Imperfect knowledge about the data-generating process ("Epistemic Uncertainty"), and irreducible noise in the data-generating process ("Aleatoric Uncertainty"). <br><br> In the classification setting, if we use a function $$\mathcal{l}(\theta, y)$$ to score the loss associated with the predicted probabilities for each class, $$\theta$$, given the one-hot encoding of the true class, $$y$$, then the aleatoric uncertainty can be defined as the expected loss under our learned generative model $$Q$$ \[1\]: $$\begin{aligned}
+AU(Q) = \mathbb{E}_{\theta \sim Q}[\mathcal{l}(\theta, y)]
+\end{aligned}$$
