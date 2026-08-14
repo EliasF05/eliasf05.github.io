@@ -33,7 +33,7 @@ To begin, let us examine the impact of our choice for $$\bar{\theta}$$. As a toy
     <img id="graphic-state-0" src="DefinitionsDiscrepancy.jpg" alt="Definitions discrepancy" style="width: 50%; display: block;">
   </div>
 </div>
-As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. <br><br>Which curve should we attempt to estimate? Here, we attempt to estimate the red curve - i.e. the target corresponding to the sample mean which is actually used for prediction, because we concern ourselves with predictive uncertainty: We want to compute the uncertainty associated with the model that we will actually use for prediction, not the model that we would use if we learned how to integrate over arbitrary neural networks.  
+As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. <br><br>Which curve should we attempt to estimate? Here, we attempt to estimate the red curve - i.e. the target corresponding to the sample mean which is actually used for prediction, because we concern ourselves with predictive uncertainty: We want to compute the uncertainty associated with the model that we will actually use for prediction, not the model that we would use if we used black magic to integrate over arbitrary neural networks.  
 
 ## Answering Question 2 <br>
 
