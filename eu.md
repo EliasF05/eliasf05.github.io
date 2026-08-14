@@ -30,7 +30,7 @@ Again, we will have to resort to a sampling-based approximation. For example, le
 To begin, let us examine the impact of our choice for $$\bar{\theta}$$. 
 <div align="center">
   <div id="thesis-graphic-container" style="position: relative; cursor: pointer; display: inline-block;">
-    <img id="graphic-state-0" src="DefinitionsDiscrepancy.jpg" alt="Definitions discrepancy" style="width: 100%; display: block;">
+    <img id="graphic-state-0" src="DefinitionsDiscrepancy.jpg" alt="Definitions discrepancy" style="width: 50%; display: block;">
   </div>
 </div>
 
