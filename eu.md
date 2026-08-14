@@ -16,4 +16,4 @@ $$\widehat{AU(Q)} = \frac{1}{N}\sum_{i=1}^N S(\theta^{(i)}),$$
 where $$S(\cdot)$$ denotes, as our running example, the Shannon entropy.
 
 
-[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected by the learner's inability to assign $$0$$ probability mass to $$\theta$$'s which . It will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in [2]. However, the use of this definition remains standard practice.
+[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected by the learner's inability to assign $$0$$ probability mass to $$\theta$$'s which have a different entropy than the true $$\theta$$. Most often, the true $$\theta$$ will have a comparably low entropy and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in [2]. However, the use of this definition remains standard practice.
