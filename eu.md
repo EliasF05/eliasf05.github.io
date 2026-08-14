@@ -18,7 +18,7 @@ $$\begin{equation}
 \end{equation}$$
 where $$S(\cdot)$$ denotes, as our running example, the Shannon entropy. <br><br> 
 The epistemic uncertainty now is defined as the expected loss incurred by the use of the averaging estimator $$\bar{\theta}$$[^2]:
-$$\begin{equation} EU(Q) = \mathbb{E}_{Q}\left[\mathbb{E}_\hat{\theta}[\mathcal{l}(\hat{\theta)] \right] \end{equation} - AU(Q)$$
+$$\begin{equation} EU(Q) = \mathbb{E}_{Q}\left[\mathbb{E}_\hat{\theta}[\mathcal{l}(\hat{\theta)] \right]- AU(Q) \end{equation}$$
 In the case of our running example, where $$\mathcal{l}$$ is the negative log-likelihood, $$EU(Q)$$ is the expected Kullback-Leibler divergence from $$\bar{\theta}$$ to $$\hat{\theta}$$:
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected by the learner's inability to assign $$0$$ probability mass to $$\theta$$'s which have a different entropy than the true $$\theta$$. Most often, the true $$\theta$$ will have a comparably low entropy and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in [2]. However, the use of this definition remains standard practice.
