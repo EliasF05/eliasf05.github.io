@@ -33,6 +33,8 @@ To begin, let us examine the impact of our choice for $$\bar{\theta}$$. As a toy
     <img id="graphic-state-0" src="DefinitionsDiscrepancy.jpg" alt="Definitions discrepancy" style="width: 50%; display: block;">
   </div>
 </div>
+As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. 
+
 
 ## Answering Question 2 <br>
 
