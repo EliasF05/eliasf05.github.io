@@ -24,7 +24,7 @@ In the case of our running example, where $$\mathcal{l}$$ is the negative log-li
 $$\begin{equation} \mathbb{E}_{Q}\left[D_{KL}(\hat{\theta}||\bar{\theta}) \right]\end{equation}.$$
 Again, we will have to resort to a sample-based approximation. For example, let us consider deep ensembles: Integration over the exact posterior is intractable, but we can sample it by training the same deep neural network architecture with different parameter initializations. We obtain samples of the trained parameters $$\theta^{(1)}, \theta{(2)}, ..., \theta^{(M)}$$. However, assuming we want to use all of our samples for prediction, we cannot easily obtain an unbiased estimator of $$EU(Q)$$, due to the presence of $$\bar{\theta}$$ inside the expectation. This leads to two questions, which this project aims to address:
 1. Is $$\bar{\theta}$$, as used in our definition of epistemic uncertainty, $$\int_{Q} \theta d\theta$$ or $$\frac{1}{M}\sum_{i=1}^M \theta^{(i)}$$?
-2. Once we've answered 1., how should we estimate $$EU(Q)$$?
+2. Once we've answered 1., how should we estimate $$EU(Q)$$?<br>
 **Answering Question 1**<br>
 
 
