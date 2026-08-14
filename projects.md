@@ -8,6 +8,6 @@ description: Some of the work I've done recently
 ---
 
 - [*Reconstruction of Quantized Time Series*](rqts.md) (Manuscript targeted for publication in preparation, supervised by Dr. Anirudh Wodeyar)
-- [*Towards better Estimators of Epistemic Uncertainty](eu.md)
+- [*Towards better Estimators of Epistemic Uncertainty*](eu.md)
 - [*Natural Language Processing Lecture Notes*](nlpnotes.md)
 
