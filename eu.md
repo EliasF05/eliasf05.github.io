@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Toward better Estimators of Epistemic Uncertainty
-description: Bachelor's Thesis
+description: Personal Project
 --- 
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
