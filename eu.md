@@ -33,10 +33,11 @@ To begin, let us examine the impact of our choice for $$\bar{\theta}$$. As a toy
     <img id="graphic-state-0" src="DefinitionsDiscrepancy.jpg" alt="Definitions discrepancy" style="width: 50%; display: block;">
   </div>
 </div>
-As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. 
-
+As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. Which curve should we attempt to estimate? Here, we attempt to estimate the red curve - i.e. the target corresponding to the sample mean which is actually used for prediction, because we concern ourselves with predictive uncertainty: While we may be able to talk about the distribution over neural network parameters resulting induced by some mechanism to create different, random initializations, we do not obtain an encoding for $$Q$$, nor are we able to ever use the true mean of $$Q$$ for prediction. 
 
 ## Answering Question 2 <br>
+
+
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
