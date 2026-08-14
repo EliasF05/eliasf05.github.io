@@ -13,4 +13,4 @@ $$AU(Q) = \mathbb{E}_{\hat{\theta} \sim Q}\left[\mathbb{E}_{y \sim \hat{\theta}}
 In words, aleatoric uncertainty quantifies the inherent uncertainty in the distribution over classes. For example, if we use the negative log-likelihood, $$\mathcal{l}(\hat{\theta}, y) = -\log(\hat{\theta}^Ty)$$, $$AU(Q)$$ is the expected entropy of $$\hat{\theta}$$.<br><br>
 We can get an unbiased estimator for the aleatoric uncertainty using Monte Carlo simulation:
 $$\widehat{AU(Q)} = \frac{1}{N}\sum_{i=1}^N S(\theta^{(i)}),$$
-where $$S(\cdot)$$ denotes, as our running example, the Shannon Entropy.
+where $$S(\cdot)$$ denotes, as our running example, the Shannon entropy.
