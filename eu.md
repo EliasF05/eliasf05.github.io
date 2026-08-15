@@ -38,8 +38,12 @@ As we would expect, the finite ensemble-based target approaches the exact averag
 ## Answering Question 2 <br>
 We are now ready to define the target for estimation
 $$\begin{equation} \mathbb{E}_{\hat{\theta}, \theta^{(1)}, \theta^{(2)}, ..., \theta^{(M)} \sim Q} \left[D_{KL}(\hat{\theta}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \right]\end{equation}$$
+
 Currently, standard practice is the following, in-sample estimator:
-$$\begin{equation} \frac{1}{M}\sum_{i=1}^M D_{KL} \end{equation}$$
+$$\begin{equation} \frac{1}{M}\sum_{i=1}^M D_{KL(\theta^{(i)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)})} \end{equation}$$
+Clearly, this estimator will underestimate the target. In particular, its bias is given by:
+$$\begin{equation} &\mathbb{E}\bigg[D_{KL}(h_1(x)||\frac{1}{M}\sum_{j=1}^Mh_j(x))-D_{KL}(h_{M+1}(x)||\frac{1}{M}\sum_{j=1}^M h_{j}(x))\bigg] \\
+= &\mathbb{E}\bigg[\sum_{k=1}^K \big ( (h_{M+1}(x)_k-h_1(x)_k)\log (\sum_{j=1}^M h_j(x)_k) \big)\bigg] \end{equation}$$
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
