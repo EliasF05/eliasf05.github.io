@@ -55,7 +55,7 @@ Recall that the previous derivation is based on the log-loss as our choice of lo
 | Scoring rule    | Estimation target | Bias approximation | Approximation type    |
 | --------------- | ----------------- | ------------------ | --------------------- |
 | Log-loss     | $$\mathbb{E}_{Q}[D_{KL}(\theta^{(M+1)}\|\|\frac{1}{M}\sum_{i=1}^M \theta^{(i)})]$$ | $$-\sum_{k=1}^K\frac{Var_Q\big[\theta_k \big]}{M\mathbb{E}\left[{\theta}_k \right]}$$ | First-order Taylor |
-| Brier score  | $$\mathbb{E}_Q[\sum_{k=1}^K (\frac{1}{M} \sum_{i=1}^M \theta^{(i)}_k-\theta^{M+1}_k)^2]$$ | $$-\frac{2}{M}\sum_{k=1}^K Var_Q[\theta_k]$$ | Exact |
+| Brier score  | $$\mathbb{E}_Q[\sum_{k=1}^K (\frac{1}{M} \sum_{i=1}^M \theta^{(i)}_k-\theta^{(M+1)}_k)^2]$$ | $$-\frac{2}{M}\sum_{k=1}^K Var_Q[\theta_k]$$ | Exact |
 
 
 
