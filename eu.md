@@ -36,7 +36,8 @@ To begin, let us examine the impact of our choice for $$\bar{\theta}$$. As a toy
 As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. <br><br>Which curve should we attempt to estimate? Here, we attempt to estimate the red curve, because we concern ourselves with predictive uncertainty: We want to compute a measure of uncertainty associated with the predictions coming from the model that we will actually use for prediction, not the model that we would use if we learned black magic to integrate over neural network training[^3]. 
 
 ## Answering Question 2 <br>
-
+We are now ready to define the target for estimation
+$$\begin{equation} \mathbb{E}_{\hat{\theta}, \theta^{(1)}, \theta^{(2)}, ..., \theta^{(M)} \sim Q} \left[D_{KL}\left[\hat{\theta}, \frac{1}{M}\sum_{i=1}^M \theta^{(i)} \right] \right]\end{equation}$$
 
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
