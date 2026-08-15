@@ -45,6 +45,12 @@ Clearly, this estimator will underestimate the target. In particular, its bias i
 $$\begin{equation} \mathbb{E}\bigg[D_{KL}(h_1(x)||\frac{1}{M}\sum_{j=1}^Mh_j(x))-D_{KL}(h_{M+1}(x)||\frac{1}{M}\sum_{j=1}^M h_{j}(x))\bigg] \\
 = \mathbb{E}\bigg[\sum_{k=1}^K \big ( (h_{M+1}(x)_k-h_1(x)_k)\log (\sum_{j=1}^M h_j(x)_k) \big)\bigg] \end{equation}$$
 
+Taking a first-order Taylor approximation of the logarithm around $M\cdot h_{0k}$ leaves us with
+$$\begin{equation}
+    &\sum_{k=1}^K\frac{1}{Mh_{0k}}\cdot \mathbb{E}\bigg[  \big(h_{M+1}(x)_k-h_1(x)_k\big)\sum_{j=1}^M h_j(x)_k \bigg] \\
+    =& -\sum_{k=1}^K\frac{Var_Q\big[h(x)_k\big]}{Mh_{0k}}.
+\end{equation}$$
+
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
 [^3]: Bayesian neural networks can provide this black magic sometimes, but suffer from limitations such as even larger computational cost than deep ensembles.
