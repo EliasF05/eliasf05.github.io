@@ -65,8 +65,8 @@ Intuitively, this estimator will overestimate the target and suffer from large v
 
 Having established the undershooting in-sample estimator used in the existing literature as well as more careful alternatives, we are now ready to compare estimators empirically. Following the work of \[4\], we will begin by modeling a Bernoulli random variable, and investigate estimator performance on the following sources of epistemic uncertainty:
 1. **Ignorance**, modelled by a $$U[0.2, 0.7]$$ belief over the Bernoulli parameter. The choice of uniform distribution does not affect the conclusions.
-2. **Weak disagreement between hypotheses**, modelled by a $$\frac{1}{2}\delta((1-10^{-6})-\theta)+\frac{1}{2}\delta(10^{-6}-\theta)$$ belief.
-3. **Strong disagreement between hypotheses**, modelled by a $$\frac{1}{2}\delta(0.56-\theta)+\frac{1}{2}\delta(0.55-\theta)$$. Shifting this Dirac mixture does not affect the conclusions.
+2. **Strong disagreement between hypotheses**, modelled by a $$\frac{1}{2}\delta((1-10^{-6})-\theta)+\frac{1}{2}\delta(10^{-6}-\theta)$$ belief.
+3. **Weak disagreement between hypotheses**, modelled by a $$\frac{1}{2}\delta(0.56-\theta)+\frac{1}{2}\delta(0.55-\theta)$$. Shifting this Dirac mixture does not affect the conclusions.
 <div align="center">
   <div id="thesis-graphic-container" style="position: relative; cursor: pointer; display: inline-block;">
     <img id="graphic-state-0" src="BernoulliResults.jpg" alt="Definitions discrepancy" style="width: 80%; display: block;">
