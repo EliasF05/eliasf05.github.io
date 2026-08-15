@@ -89,7 +89,7 @@ Uncertainty quantification methods can be used in several downstream tasks, such
 \[7\] Krizhevsky, Alex, and Geoffrey Hinton. "Learning multiple layers of features from tiny images." (2009): 7.
 
 ## Footnotes <br>
-[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process. Aleatoric uncertainty overestimation has been empirically demonstrated in \[5\]. However, the use of this definition remains standard practice.
+[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected by of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process. Aleatoric uncertainty overestimation has been empirically demonstrated in \[5\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
 [^3]: Bayesian neural networks can provide this black magic sometimes, but suffer from limitations such as even larger computational cost than deep ensembles.
 [^4]: My mathematical ability and knowledge of statistics is rather limited as of yet, please contact me if you know how to obtain more/better corrections.
