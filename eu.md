@@ -53,7 +53,7 @@ This approximation allows us to subtract the above from the in-sample estimator 
 Recall that the previous derivation is based on the log-loss as our choice of loss scoring rule. If we were to use the Brier score instead, we can obtain a closed-form expression for the bias exactly. Table 1 summarizes estimation targets and bias corrections. I hope to eventually extend this table to the zero-one loss and the spherical loss, however these are proving to be more tricky[^4]. 
 
 | Scoring rule | Estimation target                                                 | Bias approximation | Approximation Type |
-| ------------ |                                                                     -----------------  | ------------------ | ------------------ |
+| ------------ | -----------------  | ------------------ | ------------------ |
 | Log-loss     | $$\mathbb{E}_{Q}[D_{KL}(\theta||\frac{1}{M}\sum_{i=1}^Mh_i(x))]$$ | $$-\sum_{k=1}^K\frac{Var_Q\big[h(x)_k\big]}{Mh_{0k}}$$ | First-order Taylor |
 |
 
