@@ -42,8 +42,8 @@ $$\begin{equation} \mathbb{E}_{\hat{\theta}, \theta^{(1)}, \theta^{(2)}, ..., \t
 Currently, standard practice is the following, in-sample estimator:
 $$\begin{equation} \frac{1}{M}\sum_{i=1}^M D_{KL}(\theta^{(i)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \end{equation}$$
 Clearly, this estimator will underestimate the target. In particular, its bias is given by:
-$$\begin{equation} \mathbb{E}\bigg[D_{KL}(h_1(x)||\frac{1}{M}\sum_{j=1}^Mh_j(x))-D_{KL}(h_{M+1}(x)||\frac{1}{M}\sum_{j=1}^M h_{j}(x))\bigg] \\
-= \mathbb{E}\bigg[\sum_{k=1}^K \big ( (h_{M+1}(x)_k-h_1(x)_k)\log (\sum_{j=1}^M h_j(x)_k) \big)\bigg] \end{equation}$$
+$$\begin{equation} \mathbb{E}\bigg[D_{KL}(\theta^{(1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}))-D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)})\bigg] \\
+= \mathbb{E}\bigg[\sum_{k=1}^K \big ( (\theta^{(M+1)}_k-\theta^{(1)}_k)\log (\sum_{i=1}^M \theta^{(i)}_k) \big)\bigg] \end{equation}$$
 
 Taking a first-order Taylor approximation of the logarithm around $M\cdot h_{0k}$ leaves us with
 $$\begin{equation}
