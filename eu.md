@@ -73,8 +73,8 @@ Having established the undershooting in-sample estimator used in the existing li
     <img id="graphic-state-0" src="BernoulliResults.jpg" alt="Definitions discrepancy" style="width: 80%; display: block;">
   </div>
 </div>
-<br> The residuals of the presented methods for both Log loss and Brier score are shown in the above figure. In all cases, the in-sample estimate leads to underestimation, and the leave-one-out estimate leads to overestimation. The corrected in-sample estimate does not suffer from as much bias. For modest sample sizes (6-10), the leave-one-out estimate is nearly as good as the corrected estimate, though it suffers from higher variance for smaller sample sizes. It is also unusually variable and biased on the Log loss epistemic uncertainty of a belief containing hypotheses which strongly disagree. These observations indicate that corrected in-sample estimators are preferable 
-<br><br>
+The residuals of the presented methods for both Log loss and Brier score are shown in the above figure. In all cases, the in-sample estimate leads to underestimation, and the leave-one-out estimate leads to overestimation. The corrected in-sample estimate does not suffer from as much bias. For modest sample sizes (6-10), the leave-one-out estimate is nearly as good as the corrected estimate, though it suffers from higher variance for smaller sample sizes. It is also unusually variable and biased on the Log loss epistemic uncertainty of a belief containing hypotheses which strongly disagree. These observations indicate that corrected in-sample estimators are preferable 
+<br>
 
 ## Why should we care about (epistemic) uncertainty quantification? <br> 
 Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators presented here actually improve downstream task performance?   
