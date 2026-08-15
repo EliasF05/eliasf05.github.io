@@ -36,14 +36,14 @@ To begin, let us examine the impact of our choice for $$\bar{\theta}$$. As a toy
 As we would expect, the finite ensemble-based target approaches the exact averaging estimator-based target from above: The expected KL-Divergence from the true mean of $$\theta$$ is smaller than the expected KL-Divergence from the sample mean, though the two will coincide asymptotically. <br><br>Which curve should we attempt to estimate? Here, we attempt to estimate the red curve, because we concern ourselves with predictive uncertainty: We want to compute a measure of uncertainty associated with the predictions coming from the model that we will actually use for prediction, not the model that we would use if we learned black magic to integrate over neural network training[^3]. 
 
 ## Answering Question 2 <br>
-We are now ready to define the target for estimation
-$$\begin{equation} \mathbb{E}_{\theta^{(M+1)}, \theta^{(1)}, \theta^{(2)}, ..., \theta^{(M)} \sim Q} \left[D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \right]\end{equation}$$
+We are now ready to define as the target for estimation
+$$\begin{equation} \mathbb{E}_{\theta^{(M+1)}, \theta^{(1)}, \theta^{(2)}, ..., \theta^{(M)} \sim Q} \left[D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \right]\end{equation}.$$
 
 Currently, standard practice is the following, in-sample estimator:
 $$\begin{equation} \frac{1}{M}\sum_{i=1}^M D_{KL}(\theta^{(i)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \end{equation}$$
 Clearly, this estimator will underestimate the target. In particular, its bias is given by:
 $$\begin{equation} \mathbb{E}\bigg[D_{KL}(\theta^{(1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}))-D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)})\bigg] \\
-= \mathbb{E}\bigg[\sum_{k=1}^K \big ( (\theta^{(M+1)}_k-\theta^{(1)}_k)\log (\sum_{i=1}^M \theta^{(i)}_k) \big)\bigg] \end{equation}$$
+= \mathbb{E}\bigg[\sum_{k=1}^K \big ( (\theta^{(M+1)}_k-\theta^{(1)}_k)\log (\sum_{i=1}^M \theta^{(i)}_k) \big)\bigg] \end{equation}.$$
 
 Taking a first-order Taylor approximation of the logarithm around $$M \mathbb{E}_Q[\theta_k]$$ leaves us with
 $$\begin{equation} \sum_{k=1}^K\frac{1}{M\mathbb{E}[\theta_k]}\cdot \mathbb{E}\bigg[\big(\theta^{(M+1)}_k-\theta^{(1)}_k\big)\sum_{i=1}^M \theta^{(i)}_k \bigg] \\
@@ -55,6 +55,7 @@ Recall that the previous derivation is based on the log-loss as our choice of lo
 | Scoring rule | Estimation target | Bias approximation | Approximation type |
 | ------------ | ----------------- | ------------------ | ------------------ |
 | Log-loss     | $$\mathbb{E}_{Q}[D_{KL}(\theta^{(M+1)}\|\|\frac{1}{M}\sum_{i=1}^M \theta^{(i)})]$$ | $$-\sum_{k=1}^K\frac{Var_Q\big[\theta_k \big]}{M\mathbb{E}\left[{\theta}_k \right]}$$ | First-order Taylor |
+| Brier score  | $$\mathbb{E}_Q[\sum_{k=1}^K (\frac{1}{M} \sum_{i=1}^M \theta^{(i)}_k-\theta^{M+1}_k)^2]$$ | $$-\frac{2}{M}\sum_{k=1}^K Var_Q[\theta_k]$$ | Exact |
 
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
