@@ -3,9 +3,7 @@ layout: default
 title: Towards better Estimators of Epistemic Uncertainty
 description: Personal Project - Preparing Paper for Workshop Submission
 --- 
-
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
-
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
 This blog is 100% human-written. <br><br>
