@@ -75,7 +75,7 @@ The residuals of the presented methods for both Log loss and Brier score are sho
 <br>
 
 ## Why should we care about (epistemic) uncertainty quantification? <br> 
-Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators derived here actually improve performance on downstream tasks? Following the work of \[4\], I trained an ensemble of ResNet-8's[^5] on the CIFAR-10 dataset, and compared the performance on OoD using the total (aleatoric + epistemic) uncertainty across the presented epistemic uncertainty estimation methods. ---- Currently finishing up the training runs
+Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators derived here actually improve performance on downstream tasks? Following the work of \[4\], I trained an ensemble of ResNet-8's[^5] on the CIFAR-10 dataset \[6\], and compared the performance on OoD using the total (aleatoric + epistemic) uncertainty across the presented epistemic uncertainty estimation methods. ---- Currently finishing up the training runs
 
 
 ## References <br>
@@ -83,7 +83,8 @@ Uncertainty quantification methods can be used in several downstream tasks, such
 \[2\] Lakshminarayanan, Balaji, Alexander Pritzel, and Charles Blundell. "Simple and scalable predictive uncertainty estimation using deep ensembles." Advances in neural information processing systems 30 (2017). <br>
 \[3\] Wimmer, Lisa, et al. "Quantifying aleatoric and epistemic uncertainty in machine learning: Are conditional entropy and mutual information appropriate measures?." Uncertainty in artificial intelligence. PMLR, 2023.<br>
 \[4\] Hofman, Paul, Yusuf Sale, and Eyke Hüllermeier. "Uncertainty quantification for machine learning: One size does not fit all." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 40. No. 26. 2026. <br>
-\[5\] Jiménez, Sebastián, Mira Jürgens, and Willem Waegeman. "Position: Epistemic uncertainty estimation methods are fundamentally incomplete." arXiv preprint arXiv:2505.23506 (2025).
+\[5\] Jiménez, Sebastián, Mira Jürgens, and Willem Waegeman. "Position: Epistemic uncertainty estimation methods are fundamentally incomplete." arXiv preprint arXiv:2505.23506 (2025).<br>
+\[6\] Krizhevsky, Alex, and Geoffrey Hinton. "Learning multiple layers of features from tiny images." (2009): 7.
 
 ## Footnotes <br>
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process. Aleatoric uncertainty overestimation has been empirically demonstrated in \[5\]. However, the use of this definition remains standard practice.
