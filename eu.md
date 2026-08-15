@@ -56,6 +56,9 @@ Recall that the previous derivation is based on the log-loss as our choice of lo
 | --------------- | ----------------- | ------------------ | --------------------- |
 | Log-loss     | $$\mathbb{E}_{Q}[D_{KL}(\theta^{(M+1)}\|\|\frac{1}{M}\sum_{i=1}^M \theta^{(i)})]$$ | $$-\sum_{k=1}^K\frac{Var_Q\big[\theta_k \big]}{M\mathbb{E}\left[{\theta}_k \right]}$$ | First-order Taylor |
 | Brier score  | $$\mathbb{E}_Q[\sum_{k=1}^K (\frac{1}{M} \sum_{i=1}^M \theta^{(i)}_k-\theta^{M+1}_k)^2]$$ | $$-\frac{2}{M}\sum_{k=1}^K Var_Q[\theta_k]$$ | Exact |
+
+
+
 An alternative approach to avoid the underestimation associated with the in-sample estimator of epistemic uncertainty is the leave-one-out estimator:
 $$\begin{equation} \end{equation}$$
 
