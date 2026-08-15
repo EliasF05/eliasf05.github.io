@@ -40,7 +40,7 @@ We are now ready to define as the target for estimation
 $$\begin{equation} \mathbb{E}_{\theta^{(M+1)}, \theta^{(1)}, \theta^{(2)}, ..., \theta^{(M)} \sim Q} \left[D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \right]\end{equation}.$$
 
 Currently, standard practice is the following, in-sample estimator:
-$$\begin{equation} \frac{1}{M}\sum_{i=1}^M D_{KL}(\theta^{(i)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}) \end{equation}$$
+$$\begin{equation} \frac{1}{M}\sum_{i=1}^M D_{KL}(\theta^{(i)}||\frac{1}{M}\sum_{j=1}^M \theta^{(j)}) \end{equation}$$
 Clearly, this estimator will underestimate the target. In particular, its bias is given by:
 $$\begin{equation} \mathbb{E}\bigg[D_{KL}(\theta^{(1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}))-D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)})\bigg] \\
 = \mathbb{E}\bigg[\sum_{k=1}^K \big ( (\theta^{(M+1)}_k-\theta^{(1)}_k)\log (\sum_{i=1}^M \theta^{(i)}_k) \big)\bigg] \end{equation}.$$
@@ -60,7 +60,7 @@ Recall that the previous derivation is based on the log-loss as our choice of lo
 
 
 <br>An alternative approach to avoid the underestimation associated with the in-sample estimator is the leave-one-out estimator:
-$$\begin{equation} \end{equation}$$
+$$\begin{equation}\frac{1}{M}\sum_{i=1}^M  (D_{KL}(\theta^{(i)}||\frac{1}{M-1}\sum_{j\neq i}\theta^{(j)})).\end{equation} $$
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
