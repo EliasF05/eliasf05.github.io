@@ -73,9 +73,10 @@ Having established the undershooting in-sample estimator used in the existing li
     <img id="graphic-state-0" src="BernoulliResults.jpg" alt="Definitions discrepancy" style="width: 80%; display: block;">
   </div>
 </div>
-<br> The residuals of the presented methods for both Log loss and Brier score are shown in the above figure. In all cases, the in-sample estimate leads to underestimation, and the leave-one-out estimate leads to overestimation. The corrected in-sample estimate does not suffer from as much bias. For modest sample sizes (6-10), the leave-one-out estimate is nearly as good as the corrected estimate, though it suffers from higher variance for smaller sample sizes. It is also unusually variable and biased on the Log loss epistemic uncertainty of a belief containing hypotheses which strongly disagree. These observations indicate that corrected in-sample estimators are preferable.
+<br> The residuals of the presented methods for both Log loss and Brier score are shown in the above figure. In all cases, the in-sample estimate leads to underestimation, and the leave-one-out estimate leads to overestimation. The corrected in-sample estimate does not suffer from as much bias. For modest sample sizes (6-10), the leave-one-out estimate is nearly as good as the corrected estimate, though it suffers from higher variance for smaller sample sizes. It is also unusually variable and biased on the Log loss epistemic uncertainty of a belief containing hypotheses which strongly disagree. These observations indicate that corrected in-sample estimators are preferable 
 <br><br>
-Why should we care about (epistemic) uncertainty quantification? 
+
+## Why should we care about (epistemic) uncertainty quantification? <br>
 
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
