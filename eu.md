@@ -45,7 +45,7 @@ Clearly, this estimator will underestimate the target. In particular, its bias i
 $$\begin{equation} \mathbb{E}\bigg[D_{KL}(\theta^{(1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)}))-D_{KL}(\theta^{(M+1)}||\frac{1}{M}\sum_{i=1}^M \theta^{(i)})\bigg] \\
 = \mathbb{E}\bigg[\sum_{k=1}^K \big ( (\theta^{(M+1)}_k-\theta^{(1)}_k)\log (\sum_{i=1}^M \theta^{(i)}_k) \big)\bigg] \end{equation}$$
 
-Taking a first-order Taylor approximation of the logarithm around $M \mathbb{E}_Q[\theta_k]$ leaves us with
+Taking a first-order Taylor approximation of the logarithm around $$M \mathbb{E}_Q[\theta_k]$$ leaves us with
 $$\begin{equation}
     \sum_{k=1}^K\frac{1}{M\mathbb{E}[\theta_k]}\cdot \mathbb{E}\bigg[  \big(\theta^{(M+1)}_k-\theta^{(1)}_k\big)\sum_{i=1}^M \theta&{(i)}_k \bigg] \\
     = -\sum_{k=1}^K\frac{Var_Q\big[\theta_k\big]}{M\mathbb{E}[\theta_k]}.
