@@ -22,7 +22,7 @@ The epistemic uncertainty now is defined as the expected additional loss incurre
 $$\begin{equation} EU(Q) = \mathbb{E}_{Q}\left[\mathbb{E}_\hat{\theta}[\mathcal{l}(\bar{\theta}, y)] \right]- AU(Q) \end{equation}$$
 In the case of our running example, where $$\mathcal{l}$$ is the negative log-likelihood, $$EU(Q)$$ is the expected Kullback-Leibler divergence of $$\hat{\theta}$$ from $$\bar{\theta}$$,
 $$\begin{equation} \mathbb{E}_{Q}\left[D_{KL}(\hat{\theta}||\bar{\theta}) \right]\end{equation}.$$
-Again, we will have to resort to a sampling-based approximation to estimate this. For example, let us consider deep ensembles: Integration over the exact posterior is intractable, but we can sample it by training the same deep neural network architecture with different parameter initializations \[3\]. We obtain samples of the trained parameters $$\theta^{(1)}, \theta{(2)}, ..., \theta^{(M)}$$. However, assuming we want to use all of our samples for prediction, we cannot easily obtain an unbiased estimator of $$EU(Q)$$, due to the presence of $$\bar{\theta}$$ inside the expectation. This leads to two questions which this project aims to address:
+Again, we will have to resort to a sampling-based approximation to estimate this. For example, let us consider deep ensembles: Integration over the exact posterior is intractable, but we can sample it by training the same deep neural network architecture with different parameter initializations \[2\]. We obtain samples of the trained parameters $$\theta^{(1)}, \theta{(2)}, ..., \theta^{(M)}$$. However, assuming we want to use all of our samples for prediction, we cannot easily obtain an unbiased estimator of $$EU(Q)$$, due to the presence of $$\bar{\theta}$$ inside the expectation. This leads to two questions which this project aims to address:
 1. Is $$\bar{\theta}$$, as used in our definition of epistemic uncertainty, $$\int_{Q} \theta d\theta$$ or $$\frac{1}{M}\sum_{i=1}^M \theta^{(i)}$$?
 2. Once we've answered 1., how should we estimate $$EU(Q)$$?<br>
 
@@ -63,7 +63,7 @@ Recall that the previous derivation is based on the log-loss as our choice of lo
 $$\begin{equation}\frac{1}{M}\sum_{i=1}^M  (D_{KL}(\theta^{(i)}||\frac{1}{M-1}\sum_{j\neq i}\theta^{(j)})).\end{equation} $$
 Intuitively, this estimator will overestimate the target and suffer from large variance. Still, let us investigate it as an alternative/baseline to the bias-corrected estimator.<br><br>
 
-Having established the undershooting in-sample estimator used in the existing literature as well as more careful alternatives, we are now ready to compare estimators empirically. Following the work of \[4\], we model a Bernoulli random variable, and investigate estimator performance on the following sources of epistemic uncertainty:
+Having established the undershooting in-sample estimator used in the existing literature as well as more careful alternatives, we are now ready to compare estimators empirically. Following the work of \[3\], we model a Bernoulli random variable, and investigate estimator performance on the following sources of epistemic uncertainty:
 1. **Ignorance**, modelled by a $$U[0.2, 0.7]$$ belief over the Bernoulli parameter. The choice of uniform distribution does not affect the conclusions.
 2. **Strong disagreement between hypotheses**, modelled by a $$\frac{1}{2}\delta((1-10^{-6})-\theta)+\frac{1}{2}\delta(10^{-6}-\theta)$$ belief.
 3. **Weak disagreement between hypotheses**, modelled by a $$\frac{1}{2}\delta(0.56-\theta)+\frac{1}{2}\delta(0.55-\theta)$$ belief. Shifting this Dirac mixture does not affect the conclusions.
@@ -77,9 +77,17 @@ The residuals of the presented methods for both Log loss and Brier score are sho
 <br>
 
 ## Why should we care about (epistemic) uncertainty quantification? <br> 
-Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators derived here actually improve performance on downstream tasks? Following the work of \[4\], I trained an ensemble of ResNet-8's[^5] on the CIFAR-10 dataset, and compared the performance on OoD using the total (aleatoric + epistemic) uncertainty across the presented epistemic uncertainty estimation methods.
+Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators derived here actually improve performance on downstream tasks? Following the work of \[4\], I trained an ensemble of ResNet-8's[^5] on the CIFAR-10 dataset, and compared the performance on OoD using the total (aleatoric + epistemic) uncertainty across the presented epistemic uncertainty estimation methods. ---- Currently finishing up the training runs
 
-[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
+
+## References <br>
+\[1\] Hofman, Paul, Yusuf Sale, and Eyke Hüllermeier. "Quantifying aleatoric and epistemic uncertainty with proper scoring rules." arXiv preprint arXiv:2404.12215 (2024). <br>
+\[2\] Lakshminarayanan, Balaji, Alexander Pritzel, and Charles Blundell. "Simple and scalable predictive uncertainty estimation using deep ensembles." Advances in neural information processing systems 30 (2017). <br>
+\[3\] Wimmer, Lisa, et al. "Quantifying aleatoric and epistemic uncertainty in machine learning: Are conditional entropy and mutual information appropriate measures?." Uncertainty in artificial intelligence. PMLR, 2023.<br>
+\[4\] Hofman, Paul, Yusuf Sale, and Eyke Hüllermeier. "Uncertainty quantification for machine learning: One size does not fit all." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 40. No. 26. 2026. <br>
+\[5\] Jiménez, Sebastián, Mira Jürgens, and Willem Waegeman. "Position: Epistemic uncertainty estimation methods are fundamentally incomplete." arXiv preprint arXiv:2505.23506 (2025).
+
+[^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process. Aleatoric uncertainty overestimation has been empirically demonstrated in \[5\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
 [^3]: Bayesian neural networks can provide this black magic sometimes, but suffer from limitations such as even larger computational cost than deep ensembles.
 [^4]: My mathematical ability and knowledge of statistics is rather limited as of yet, please contact me if you know how to obtain more/better corrections.
