@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reconstruction of Quantized Time Series
-description: Bachelor's Thesis - Supported by Aucos AG
+description: Bachelor's Thesis
 --- 
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
