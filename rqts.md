@@ -4,11 +4,9 @@ title: Reconstruction of Quantized Time Series
 description: Bachelor's Thesis
 --- 
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
 ---
-
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 Below is a quantized time series - meaning that at each time point/sampling interval, its current value was rounded. This project was about estimating the original, unquantized, time series, using only the quantized time series that you see below.<br><br>
 Click on the plot once to overlay the original time series, then click again to overlay the estimate.
 
