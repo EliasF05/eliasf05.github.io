@@ -52,20 +52,10 @@ $$\begin{equation} \sum_{k=1}^K\frac{1}{M\mathbb{E}[\theta_k]}\cdot \mathbb{E}\b
 This approximation allows us to subtract the above from the in-sample estimator for an improved, first-order bias-corrected, estimator, though we will have to use the members of our ensemble to approximate the involved variance and expectation. <br><br>
 Recall that the previous derivation is based on the log-loss as our choice of loss scoring rule. If we were to use the Brier score instead, we can obtain a closed-form expression for the bias exactly. Table 1 summarizes estimation targets and bias corrections. I hope to eventually extend this table to the zero-one loss and the spherical loss, however these are proving to be more tricky[^4]. 
 
-$$\begin{table}[h]
-  \caption{Scoring rule estimation targets and the biases of associated in-sample estimators.}
-  \label{sample-table}
-  \centering
-  \begin{tabular}{llll}
-    \toprule
-    Scoring rule     & Estimation target     & Bias approximation & Approximation type  \\
-    \midrule
-    Log loss &$\mathbb{E}_{Q}[D_{KL}(\theta||\frac{1}{M}\sum_{i=1}^Mh_i(x))]$  & $-\sum_{k=1}^K\frac{Var_Q\big[h(x)_k\big]}{Mh_{0k}}$ & First-order Taylor  \\
-    Brier score     & $\mathbb{E}_Q[\sum_{k=1}^K (\frac{1}{M} \sum_{i=1}^M h_i(x)_k-\theta_k)^2]$ & $-\frac{2}{M}\sum_{k=1}^K Var_Q[h(x)_k]$   & Exact  \\
-    \bottomrule
-  \end{tabular}
-  \label{tab:Biases}
-\end{table}$$
+| Scoring rule | Estimation target                                                 | Bias approximation | Approximation Type |
+| ------------ |                                                                     -----------------  | ------------------ | ------------------ |
+| Log-loss     | $$\mathbb{E}_{Q}[D_{KL}(\theta||\frac{1}{M}\sum_{i=1}^Mh_i(x))]$$ | $$-\sum_{k=1}^K\frac{Var_Q\big[h(x)_k\big]}{Mh_{0k}}$$ | First-order Taylor |
+|
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
