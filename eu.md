@@ -49,6 +49,9 @@ Taking a first-order Taylor approximation of the logarithm around $$M \mathbb{E}
 $$\begin{equation} \sum_{k=1}^K\frac{1}{M\mathbb{E}[\theta_k]}\cdot \mathbb{E}\bigg[\big(\theta^{(M+1)}_k-\theta^{(1)}_k\big)\sum_{i=1}^M \theta^{(i)}_k \bigg] \\
 = -\sum_{k=1}^K\frac{Var_Q\big[\theta_k\big]}{M\mathbb{E}[\theta_k]}. \end{equation}$$
 
+This approximation allows us to subtract the above from the in-sample estimator for an improved, first-order bias-corrected, estimator, though we will have to use the members of our ensemble to approximate the involved variance and expectation. <br><br>
+Recall that the previous derivation is based on the log-loss as our choice of loss scoring rule. If we were to use the Brier score instead, we can obtain a closed-form expression for the bias exactly. Table 1 summarizes estimation targets and bias corrections. I hope to eventually extend this table to the zero-one loss and the spherical loss, however these are proving more tricky. 
+
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
 [^3]: Bayesian neural networks can provide this black magic sometimes, but suffer from limitations such as even larger computational cost than deep ensembles.
