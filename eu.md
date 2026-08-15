@@ -46,7 +46,7 @@ $$\begin{equation} \mathbb{E}\bigg[D_{KL}(\theta^{(1)}||\frac{1}{M}\sum_{i=1}^M 
 = \mathbb{E}\bigg[\sum_{k=1}^K \big ( (\theta^{(M+1)}_k-\theta^{(1)}_k)\log (\sum_{i=1}^M \theta^{(i)}_k) \big)\bigg] \end{equation}$$
 
 Taking a first-order Taylor approximation of the logarithm around $$M \mathbb{E}_Q[\theta_k]$$ leaves us with
-$$\begin{equation} \sum_{k=1}^K\frac{1}{M\mathbb{E}[\theta_k]}\cdot \mathbb{E}\bigg[\big(\theta^{(M+1)}_k-\theta^{(1)}_k\big)\sum_{i=1}^M \theta&{(i)}_k \bigg] \\
+$$\begin{equation} \sum_{k=1}^K\frac{1}{M\mathbb{E}[\theta_k]}\cdot \mathbb{E}\bigg[\big(\theta^{(M+1)}_k-\theta^{(1)}_k\big)\sum_{i=1}^M \theta^{(i)}_k \bigg] \\
 = -\sum_{k=1}^K\frac{Var_Q\big[\theta_k\big]}{M\mathbb{E}[\theta_k]}. \end{equation}$$
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
