@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Towards better Estimators of Epistemic Uncertainty
-description: Personal Project - Targeting Workshop Submission
+description: Personal Project - Preparing Paper for Workshop Submission
 --- 
 
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
