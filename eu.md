@@ -59,7 +59,7 @@ Recall that the previous derivation is based on the log-loss as our choice of lo
 
 
 
-An alternative approach to avoid the underestimation associated with the in-sample estimator of epistemic uncertainty is the leave-one-out estimator:
+<br>An alternative approach to avoid the underestimation associated with the in-sample estimator of epistemic uncertainty is the leave-one-out estimator:
 $$\begin{equation} \end{equation}$$
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
