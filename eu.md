@@ -77,9 +77,10 @@ The residuals of the presented methods for both Log loss and Brier score are sho
 <br>
 
 ## Why should we care about (epistemic) uncertainty quantification? <br> 
-Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators presented here actually improve downstream task performance?   
+Uncertainty quantification methods can be used in several downstream tasks, such as Out-of-Distribution (OoD) detection and active learning. So do the corrected uncertainty estimators derived here actually improve downstream task performance? Following the work of \[4\], I trained an ensemble of ResNet-8's[^5] on the CIFAR-10 dataset, and compared the performance on OoD using the total (aleatoric + epistemic) uncertainty across the presented epistemic uncertainty estimation methods.
 
 [^1]: This definition of aleatoric uncertainty has been criticized because it will be affected because of the learner's inability to learn a Dirac delta distribution for $$Q$$ from a finite amount of samples. Most often, the true $$\theta$$ will have a lower entropy than the average $$\theta$$ under $$Q$$, and we will therefore generally overestimate the true amount of irreducible noise in the data-generating process, as has been empirically demonstrated in \[2\]. However, the use of this definition remains standard practice.
 [^2]: This too has been criticized, and this too remains standard practice.
 [^3]: Bayesian neural networks can provide this black magic sometimes, but suffer from limitations such as even larger computational cost than deep ensembles.
 [^4]: My mathematical ability and knowledge of statistics is rather limited as of yet, please contact me if you know how to obtain more/better corrections.
+[^5]: In \[4\] a ResNet-18 is trained, but due to computational constraints I had to opt for a smaller architecture.
