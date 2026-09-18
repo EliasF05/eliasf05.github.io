@@ -7,7 +7,7 @@ title: Elias Frühwein
 ---
 
 **About Me** \
-I'm a graduate student in data science with an interest for most topics in machine learning, with some research experience in state estimation and system identification. 
+I'm a graduate student in data science with an interest for most topics in machine learning, with some research experience in machine learning and computational bayesian statistics. \
 
 
 
