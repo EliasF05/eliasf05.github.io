@@ -8,7 +8,7 @@ description: A rough outline of my education and experience. Please contact me f
 ---
 
 **Education** \
-2026 -- 2028: MSc in Data Science at ETH Zurich
+2026 -- 2028: MSc in Data Science at ETH Zurich \
 2023 -- 2026: BSc in Data Science and Artificial Intelligence at Maastricht University 
 
 **Experience** \
