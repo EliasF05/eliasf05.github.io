@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Towards better Estimators of Epistemic Uncertainty
-description: Personal Project - Preparing Paper for Workshop Submission
+description: Personal project
 --- 
 
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
