@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reconstruction of Quantized Time Series
-description: Bachelor's Thesis
+description: Bachelor's Thesis, Manuscript for publication in preparation
 --- 
 
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
