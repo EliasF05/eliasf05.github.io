@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Elias Frühwein 
-description: Student - MSc in Data Science at ETHZ
+description: Student - MSc in Data Science at ETH
 --- 
 
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
