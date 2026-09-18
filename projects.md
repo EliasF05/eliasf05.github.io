@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Research & Projects
-description: 
+description: Some projects I've worked on recently
 --- 
 
 **[Home](index.md)** | **[Research & Projects](projects.md)** | **[CV](cv.md)** | **[Contact](contact.md)**
