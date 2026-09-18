@@ -8,6 +8,5 @@ description: Some of the work I've done recently
 ---
 
 - [*Reconstruction of Quantized Time Series*](rqts.md) 
-- [*Towards better Estimators of Epistemic Uncertainty*](eu.md)
-- [*Natural Language Processing Lecture Notes*](nlpnotes.md)
+- [*Corrected Estimators of Epistemic Uncertainty Measures*](eu.md)
 
