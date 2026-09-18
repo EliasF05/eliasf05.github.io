@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Towards better Estimators of Epistemic Uncertainty
+title: Corrected Estimators of Epistemic Uncertainty Measures
 description: Personal project
 --- 
 
