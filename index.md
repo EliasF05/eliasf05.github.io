@@ -1,8 +1,3 @@
-<div align="center">
-  <div id="thesis-graphic-container" style="position: relative; cursor: pointer; display: inline-block;">
-    <img id="graphic-state-0" src="before.jpg" alt="Quantized time series" style="width: 100%; display: block;">
-  </div>
-</div>
 ---
 layout: default
 title: Elias Frühwein 
