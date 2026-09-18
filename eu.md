@@ -8,7 +8,7 @@ description: Personal project
 ---
 <div align="center">
   <div id="thesis-graphic-container" style="position: relative; cursor: pointer; display: inline-block; padding-top: 100px">
-    <object data="CorrectedEUEstimators.pdf" type="application/pdf" width="500px" height="500px">
+    <object data="CorrectedEUEstimators.pdf" type="application/pdf" width="600px" height="600px">
         <embed src="CorrectedEUEstimators.pdf">
             <p>This browser does not support PDFs. Please download the PDF to view it: <a href="CorrectedEUEstimators.pdf">Download PDF</a>.</p>
         </embed>
